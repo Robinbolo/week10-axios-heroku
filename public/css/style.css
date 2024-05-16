@@ -4,6 +4,12 @@ body {
     background-color: rgba(135, 160, 160, 0.459);
 }
 
+.chat-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
 * {
     margin: 0;
     padding: 0;
