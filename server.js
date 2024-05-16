@@ -1,11 +1,12 @@
 const { default: axios } = require('axios');
 const express = require('express');
-const http = require ("http");
+const http = require('http');
 const app = express();
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 
 app.get('/', (req, res) => {
@@ -92,7 +93,7 @@ app.post('/getmovie', (req, res) => {
 			: '';
 
 	const reqUrl = encodeURI(
-		`http://www.omdbapi.com/?t=${movieToSearch}&apikey=59ec24f3`
+		`http://www.omdbapi.com/?t=${movieToSearch}&apikey=cc6f9d1b`
 	);
 	http.get(
 		reqUrl,
